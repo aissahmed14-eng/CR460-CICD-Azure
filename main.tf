@@ -64,7 +64,7 @@ resource "azurerm_container_group" "container" {
 
   container {
     name   = "nginx"
-    image  = "nginx"
+    image  = "nginx:latest"
     cpu    = "0.5"
     memory = "1"
 
