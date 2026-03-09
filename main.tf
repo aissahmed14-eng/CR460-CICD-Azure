@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "rg" {
-  name     = "rg-cr460-ahmed"
+  name = "nic-cr460-2"
   location = "East US"
 }
 resource "azurerm_virtual_network" "vnet" {
