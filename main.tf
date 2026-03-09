@@ -54,3 +54,27 @@ resource "azurerm_linux_virtual_machine" "vm" {
 
   disable_password_authentication = false
 }
+resource "azurerm_container_group" "container" {
+  name                = "container-cr460-ahmed"
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+  ip_address_type     = "public"
+  dns_name_label      = "cr460ahmedcontainer"
+  os_type             = "Linux"
+
+  container {
+    name   = "nginx"
+    image  = "nginx"
+    cpu    = "0.5"
+    memory = "1"
+
+    ports {
+      port     = 80
+      protocol = "TCP"
+    }
+  }
+
+  tags = {
+    environment = "CR460"
+  }
+}
