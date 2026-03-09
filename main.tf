@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "rg" {
   name = "nic-cr460-2"
-  location = "East US"
+  location = "West US 2"
 }
 resource "azurerm_virtual_network" "vnet" {
   name                = "vnet-cr460-ahmed"
