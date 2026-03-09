@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "rg" {
   name     = "rg-cr460-ahmed"
-  location = "France Central"
+  location = "Canada Central"
 }
 resource "azurerm_virtual_network" "vnet" {
   name                = "vnet-cr460-ahmed"
