@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "rg" {
-  name = "nic-cr460-2"
-  location = "West US 2"
+  name = "rg-cr460-ahmed"
+  location = "Canada Central"
 }
 resource "azurerm_virtual_network" "vnet" {
   name                = "vnet-cr460-ahmed"
@@ -31,7 +31,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   name                = "vm-cr460-ahmed"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
-  size = "Standard_DS1_v2"
+  size = "Standard_B1s"
   admin_username      = "azureuser"
 
   network_interface_ids = [
